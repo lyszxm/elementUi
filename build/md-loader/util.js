@@ -8,7 +8,7 @@ function stripScript(content) {
 
 function stripStyle(content) {
   const result = content.match(/<(style)\s*>([\s\S]+)<\/\1>/);
-  return result && result[2] ? result[2].trim() : '';
+  return result && result[2] ? result[2].trim() : ''; // 2则是拿里面标签的内容
 }
 
 // 编写例子时不一定有 template。所以采取的方案是剔除其他的内容
@@ -17,6 +17,7 @@ function stripTemplate(content) {
   if (!content) {
     return content;
   }
+  // [\s\S] 是一个常用技巧，表示匹配源文本中的每一个字符，包括换行符。
   return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
 }
 

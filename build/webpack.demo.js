@@ -10,6 +10,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const launchEditorMiddleware = require('launch-editor-middleware');
 
 const config = require('./config');
+console.log('🚀💥💥 ~ config: --》》', config)
 
 const isProd = process.env.NODE_ENV === 'production';
 const isPlay = !!process.env.PLAY_ENV;

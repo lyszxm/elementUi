@@ -15,6 +15,8 @@
         document.write('<script src="//cdn.jsdelivr.net/npm/es6-promise@4.1.1/dist/es6-promise.min.js"><\/script><script>ES6Promise.polyfill()<\/script>')
       }
     </script>
+    <!-- 这个unpkg都可以拿自己npm的包 -->
+    <script src="https://unpkg.com/@l-packages/collection-tools@1.0.4-beta.3/dist/collectionTools.js"></script>
     <div id="app"></div>
     <% if (process.env.NODE_ENV === 'production') { %>
       <script src="//shadow.elemecdn.com/npm/vue@2.5.21/dist/vue.runtime.min.js"></script>

@@ -86,6 +86,7 @@ const registerRoute = (navConfig) => {
     const component = page.path === '/changelog'
       ? load(lang, 'changelog')
       : loadDocs(lang, page.path);
+    console.log('🚀💥💥 ~ component: --》》', component);
     let child = {
       path: page.path.slice(1),
       meta: {
@@ -99,7 +100,7 @@ const registerRoute = (navConfig) => {
 
     route[index].children.push(child);
   }
-
+  console.log(route, '--------------<');
   return route;
 };
 

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import entry from './app';
 import VueRouter from 'vue-router';
-import Element from 'main/index.js';
+import Element from 'main/index.js'; // alias设置了main别名 = src
 import hljs from 'highlight.js';
 import routes from './route.config';
 import demoBlock from './components/demo-block';
@@ -16,7 +16,7 @@ import './demo-styles/index.scss';
 import './assets/styles/common.css';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
-
+console.log(Element, '=======Element');
 Vue.use(Element);
 Vue.use(VueRouter);
 Vue.component('demo-block', demoBlock);

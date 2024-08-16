@@ -5,16 +5,20 @@
     @mouseenter="hovering = true"
     @mouseleave="hovering = false">
     <div class="source">
+      <!-- 这里面就是放 ```html 下面的标签所展示的内容 -->
       <slot name="source"></slot>
     </div>
     <div class="meta" ref="meta">
       <div class="description" v-if="$slots.default">
         <slot></slot>
       </div>
+      <!-- 高亮代码栏 -->
       <div class="highlight">
+        <!-- 这里 由md解析，替换的是:::demo的内容 -->
         <slot name="highlight"></slot>
       </div>
     </div>
+    <!-- 控制栏 -->
     <div
       class="demo-block-control"
       ref="control"
